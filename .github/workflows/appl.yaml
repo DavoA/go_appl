@@ -1,0 +1,13 @@
+name: Main Appl
+on:
+  workflow_dispatch: 
+
+jobs:
+  build:
+    name: Building and Testing
+    uses: DavoA/ReUse/.github/workflows/build_run_tests.yaml
+  dockering:
+    name: Building image and pushing
+    if: success()
+    uses: DavoA/ReUse/.github/workflows/docker_build_push.yaml
+  
