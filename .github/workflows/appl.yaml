@@ -5,7 +5,7 @@ on:
 jobs:
   build:
     name: Building and Testing
-    uses: DavoA/ReUse/.github/workflows/build_run_tests.yaml@main
+    uses: DavoA/ReUse/.github/workflows/build_run_tests.yml@main
   dockering:
     name: Building image and pushing
     if: success()
